@@ -40,3 +40,48 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Global CSS */
+
+/* Navbar */
+.navBar {
+    height: 100px;
+    background-color: #121111;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    padding: 10px 5px;
+}
+
+.logo {
+    margin-left: -40px;
+}
+
+.logo .logoName {
+    font-size: 32px;
+}
+
+.menu {
+    margin-left: -150px;
+}
+
+.menu .menuList {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.menu .menuList .itemMenu {
+    font-size: 24px;
+}
+
+.socialMedias .socialMediasList {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.socialMedias .socialMediasList .itemSocialMedia {
+    font-size: 24px;
+}
