@@ -1,6 +1,5 @@
 /* CSS Reset */
-
-*, *::before, *::after {
+*,*::before, *::after {
   box-sizing: border-box;
 }
 
@@ -41,47 +40,74 @@ a {
   color: inherit;
 }
 
-/* Global CSS */
+/* Variáveis */
+:root {
+  --bg-navbar: #121111;
+  --text-color: #fff;
+  --accent-color: #ae1a1a;
+}
 
-/* Navbar */
+/* CSS Global */
+
 .navBar {
-    height: 100px;
-    background-color: #121111;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #fff;
-    padding: 10px 5px;
+  height: 80px;
+  background-color: var(--bg-navbar);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+}
+
+.logo, .menu, .socialMedias {
+  flex: 1;
 }
 
 .logo {
-    margin-left: -40px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .logo .logoName {
-    font-size: 32px;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .menu {
-    margin-left: -150px;
+  display: flex;
+  justify-content: center;
 }
 
 .menu .menuList {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
+  display: flex;
+  gap: 2rem;
 }
 
-.menu .menuList .itemMenu {
-    font-size: 24px;
+.itemMenu a {
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
-.socialMedias .socialMediasList {
-    display: flex;
-    justify-content: space-around;
-    gap: 5px;
+.itemMenu a:hover {
+  color: var(--accent-color);
 }
 
-.socialMedias .socialMediasList .itemSocialMedia {
-    font-size: 24px;
+.socialMedias {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.socialMediasList {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.itemSocialMedia {
+  font-size: 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+.itemSocialMedia:hover {
+  transform: scale(1.2);
+  color: var(--accent-color)
 }
