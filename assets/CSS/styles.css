@@ -131,6 +131,7 @@ a {
 }
 
 .hero-title {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 3.5rem;
   line-height: 1.1;
 }
