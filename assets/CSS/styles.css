@@ -49,6 +49,8 @@ a {
 
 /* CSS Global */
 
+/* Barra de Navegação - Menu */
+
 .navBar {
   height: 80px;
   background-color: var(--bg-navbar);
@@ -112,7 +114,7 @@ a {
   color: var(--accent-color)
 }
 
-/* Hero Section */
+/* Seção Início */
 .hero {
   min-height: calc(100vh - 80px);
   display: flex;
@@ -179,3 +181,5 @@ a {
   align-items: center;
   border-radius: 20px;
 }
+
+/* Seção Sobre */
