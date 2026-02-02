@@ -455,8 +455,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  background-color: #25d366;
-  color: var(--bg-navbar);
+  background-color: var(--accent-color);
+  color: #fff;
   padding: 12px 20px;
   border-radius: 5px;
   font-weight: bold;
