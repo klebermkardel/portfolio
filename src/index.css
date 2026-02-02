@@ -293,9 +293,11 @@ a {
   flex: 0 0 auto; 
 }
 
-.skill-card i {
+.skill-card i, 
+.skill-card svg {
   font-size: 3rem;
   color: var(--accent-color);
+  width: 2rem; /* Garante que o SVG mantenha a proporção */
 }
 
 .skill-card h3 {
