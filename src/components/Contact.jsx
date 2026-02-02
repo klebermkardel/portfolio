@@ -24,8 +24,7 @@ const Contact = () => {
           </div>
         </div>
         <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
-          {/* Chave gratuita do Web3Forms para receber no e-mail */}
-          <input type="hidden" name="access_key" value="SUA_CHAVE_AQUI" />
+          <input type="hidden" name="access_key" value="c10b924d-611a-4473-a389-904e3a5f8252" />
 
           <div className="form-group">
             <input type="text" name="name" placeholder="Seu Nome" required />
