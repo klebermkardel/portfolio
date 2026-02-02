@@ -43,7 +43,7 @@ const Contact = () => {
           </div>
 
           <div className="form-group">
-            <input type="tel" name="email" placeholder="WhatsApp (XX) XXXXX-XXXX" required />
+            <input type="tel" name="whatsapp" placeholder="WhatsApp (XX) XXXXX-XXXX" required />
           </div>
 
           <div className="form-group">
