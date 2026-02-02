@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   return (
@@ -18,9 +18,7 @@ const Contact = () => {
             <a href="https://wa.me/5511988126221" target="_blank" rel="noreferrer" className="whatsapp-link">
               <FontAwesomeIcon icon={faWhatsapp} /> Converse pelo WhatsApp
             </a>
-            <p className="email-text">
-              <FontAwesomeIcon icon={faEnvelope} /> devklebermkardel@gmail.com
-            </p>
+
           </div>
         </div>
         <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
