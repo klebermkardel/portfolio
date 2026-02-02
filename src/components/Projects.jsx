@@ -1,10 +1,13 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Projects = () => {
   const projectsList = [
     {
       title: "Projeto Exemplo 1",
-      image: "/assets/IMG/projects/projeto1.jpg", // Caminho da imagem
+      image: "/assets/IMG/projects/projeto1.jpg",
       description: "Uma breve descrição do que o projeto faz e qual problema ele resolve.",
       techs: ["React", "Node.js", "MongoDB"],
       github: "https://github.com/klebermkardel",
@@ -22,13 +25,12 @@ const Projects = () => {
 
   return (
     <section id="projetos" className="projects">
-      <h2 className="projects-title">Meus Projetos</h2>
-      <p className="projects-subtitle">Alguns dos trabalhos que desenvolvi recentemente.</p>
+      <h2 className="section-title">Meus Projetos</h2>
+      <p className="section-subtitle">Alguns dos trabalhos que desenvolvi recentemente.</p>
 
       <div className="projects-grid">
         {projectsList.map((project, index) => (
           <article className="project-card" key={index}>
-            {/* Imagem do Projeto */}
             <div className="project-image">
               <img src={project.image} alt={`Screenshot do ${project.title}`} />
             </div>
@@ -43,10 +45,10 @@ const Projects = () => {
               </div>
               <div className="project-links">
                 <a href={project.github} target="_blank" rel="noreferrer">
-                  <i className="fa-brands fa-github"></i> Code
+                  <FontAwesomeIcon icon={faGithub} /> Code
                 </a>
                 <a href={project.link} target="_blank" rel="noreferrer">
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                  <FontAwesomeIcon icon={faExternalLinkAlt} /> Live Demo
                 </a>
               </div>
             </div>
