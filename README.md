@@ -1,16 +1,27 @@
-# React + Vite
+Portfolio - Kleber M Kardel
+Este é o repositório do meu portfólio pessoal, desenvolvido com React e Vite. O projeto foi focado em criar uma interface moderna, performática e totalmente responsiva para apresentar meus projetos e habilidades como Desenvolvedor Fullstack.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🛠️ Tecnologias Utilizadas
+React 18 - Biblioteca Javascript para construção de interfaces.
 
-Currently, two official plugins are available:
+Vite - Build tool de última geração para um desenvolvimento rápido.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+FontAwesome - Ícones vetoriais gerenciados via componentes React.
 
-## React Compiler
+CSS3 - Estilização moderna com variáveis e Flexbox/Grid.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Web3Forms - Integração de formulário de contato sem necessidade de backend.
 
-## Expanding the ESLint configuration
+📱 Funcionalidades
+Typewriter Effect: Animação de escrita dinâmica na seção Hero com useRef.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Habilidades Dinâmicas: Grid de tecnologias renderizado a partir de mapeamento de dados.
+
+Projetos Showcase: Cards com efeitos de zoom, descrição de tecnologias e links externos.
+
+Formulário Funcional: Recebimento de mensagens diretamente no e-mail com proteção anti-spam.
+
+Contato Direto: Integração com API do WhatsApp para comunicação rápida.
+
+🎨 Layout
+O layout foi desenhado para ser limpo e intuitivo, utilizando uma paleta de cores escura com acentos em vermelho (#ae1a1a), transmitindo seriedade e foco técnico.
