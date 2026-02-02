@@ -492,6 +492,17 @@ a {
   border-color: var(--accent-color);
 }
 
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 5px;
+  appearance: none; /* Remove a seta padrão do navegador */
+  cursor: pointer;
+}
+
 .footer {
   margin-top: 80px;
   padding-top: 40px;

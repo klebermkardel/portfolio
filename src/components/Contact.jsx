@@ -29,13 +29,27 @@ const Contact = () => {
           <div className="form-group">
             <input type="text" name="name" placeholder="Seu Nome" required />
           </div>
+
+          <div className="form-group">
+            <select name="subject" required className="form-select">
+                <option value="" disabled selected>Selecione o Assunto</option>
+                <option value="Orçamento de Projeto">Orçamento de Projeto</option>
+                <option value="Dúvida Técnica">Dúvida Técnica</option>
+                <option value="Proposta de Emprego">Proposta de Emprego</option>
+                <option value="Outros">Outros</option>
+            </select>
+        </div>
           
           <div className="form-group">
             <input type="email" name="email" placeholder="Seu E-mail" required />
           </div>
 
           <div className="form-group">
-            <textarea name="message" placeholder="Conte-me sobre seu projeto" rows="5" required></textarea>
+            <input type="tel" name="email" placeholder="WhatsApp (XX) XXXXX-XXXX" required />
+          </div>
+
+          <div className="form-group">
+            <textarea name="message" placeholder="Sua mensagem aqui..." rows="10" required></textarea>
           </div>
 
           <button type="submit" className="btn-primary">
