@@ -1,8 +1,8 @@
-Portfolio - Kleber M Kardel
+# Portfolio - Kleber M Kardel
 
 Este é o repositório do meu portfólio pessoal, desenvolvido com React e Vite. O projeto foi focado em criar uma interface moderna, performática e totalmente responsiva para apresentar meus projetos e habilidades como Desenvolvedor Fullstack.
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 React 18 - Biblioteca Javascript para construção de interfaces.
 
@@ -14,7 +14,7 @@ CSS3 - Estilização moderna com variáveis e Flexbox/Grid.
 
 Web3Forms - Integração de formulário de contato sem necessidade de backend.
 
-📱 Funcionalidades
+## 📱 Funcionalidades
 
 Typewriter Effect: Animação de escrita dinâmica na seção Hero com useRef.
 
@@ -26,6 +26,6 @@ Formulário Funcional: Recebimento de mensagens diretamente no e-mail com prote�
 
 Contato Direto: Integração com API do WhatsApp para comunicação rápida.
 
-🎨 Layout
+## 🎨 Layout
 
 O layout foi desenhado para ser limpo e intuitivo, utilizando uma paleta de cores escura com acentos em vermelho (#ae1a1a), transmitindo seriedade e foco técnico.
