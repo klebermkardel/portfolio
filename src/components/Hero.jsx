@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import avatarImg from '../assets/img/avatar.png';
 
 const Hero = () => {
     const [text, setText] = useState("");
@@ -41,7 +42,11 @@ const Hero = () => {
             </div>
             <div className="hero-image">
                 <div className="art-container">
-                    <span>[ Espaço para o Avatar ]</span>
+                    <img 
+                        src={avatarImg}
+                        alt="Avatar de Kleber M Kardel"
+                        className="avatar-animated"    
+                    />
                 </div>
             </div>
         </section>
