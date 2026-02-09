@@ -6,10 +6,7 @@ const Hero = () => {
     const fullText = "Kleber M Kardel";
     const indexRef = useRef(0);
 
-    useEffect(() => {
-        // Removemos o setText("") daqui de cima para evitar o aviso do ESLint.
-        // O estado inicial já é "" (definido no useState).
-        
+    useEffect(() => {   
         indexRef.current = 0;
 
         const timer = setInterval(() => {
@@ -24,8 +21,6 @@ const Hero = () => {
 
         return () => {
             clearInterval(timer);
-            // Opcional: limpa o texto quando o utilizador sai da seção
-            // Mas para um Typewriter de entrada, geralmente não é necessário.
         };
     }, []);
 

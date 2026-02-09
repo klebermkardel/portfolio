@@ -317,7 +317,7 @@ a {
 .skill-card svg {
   font-size: 3rem;
   color: var(--accent-color);
-  width: 2rem; /* Garante que o SVG mantenha a proporção */
+  width: 2rem;
 }
 
 .skill-card h3 {
@@ -335,19 +335,19 @@ a {
 .project-image {
   width: 100%;
   height: 200px;
-  overflow: hidden; /* Corta o que sobrar da imagem */
-  border-radius: 8px 8px 0 0; /* Arredonda apenas os cantos superiores */
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
   margin-bottom: 1.5rem;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-/* Efeito de zoom na imagem quando passar o rato no CARD */
+/* Efeito de zoom na imagem quando passar o mouse no CARD */
 .project-card:hover .project-image img {
   transform: scale(1.1);
 }
@@ -381,7 +381,7 @@ a {
   background-color: #1a1a1a;
   border: 1px solid #333;
   border-radius: 10px;
-  width: 350px; /* Projetos precisam de mais espaço para texto */
+  width: 350px;
   padding: 0;
   overflow: hidden;
   text-align: left;
@@ -519,7 +519,7 @@ a {
   border: 1px solid #333;
   color: #fff;
   border-radius: 5px;
-  appearance: none; /* Remove a seta padrão do navegador */
+  appearance: none;
   cursor: pointer;
 }
 

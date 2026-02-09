@@ -31,7 +31,6 @@ const Skills = () => {
       <div className="skills-grid">
         {skillsList.map((skill, index) => (
           <div className="skill-card" key={index}>
-            {/* Substituímos a tag <i> pelo componente FontAwesomeIcon */}
             <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
             <h3>{skill.name}</h3>
           </div>
