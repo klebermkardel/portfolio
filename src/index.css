@@ -593,6 +593,21 @@ a {
   cursor: pointer;
 }
 
+.form-select {
+  border: 1px solid #333;
+  outline: none;
+}
+
+.form-select:focus {
+  border-color: #ae1a1a;
+  box-shadow: 0 0 5px rgba(174, 26, 26, 0.5); 
+}
+
+.form-select option {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
 .footer {
   margin-top: 80px;
   padding-top: 40px;
