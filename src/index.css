@@ -388,6 +388,7 @@ a {
 .modal-content h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--text-color);
 }
 
 .modal-content p {
