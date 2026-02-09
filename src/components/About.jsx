@@ -16,14 +16,16 @@ const About = () => {
                 <div className="about-text">
                     <h2 className="section-title">Sobre Mim</h2>
                     <p>
-                        Olá! Eu sou o Kleber, um desenvolvedor focado em construir aplicações robustas e escaláveis. 
-                        Minha jornada na programação começou com a curiosidade de entender como as coisas funcionam "por baixo do capô", 
-                        o que me levou a explorar o ecossistema Fullstack.
+                        Me chamo <strong>Kleber M. Kardel</strong>, desenvolvedor Fullstack graduado em 
+                        <strong> Ciência da Computação</strong> pela FAM - Faculdades das Américas. 
+                        Minha base acadêmica sólida me permite transitar com segurança por toda a camada de 
+                        desenvolvimento, desde a estruturação de dados até a interface final.
                     </p>
                     <p>
-                    Hoje, dedico meu tempo a criar interfaces intuitivas e APIs eficientes, sempre buscando 
-                    as melhores práticas de mercado e performance. Acredito que a tecnologia é uma ferramenta 
-                    para resolver problemas reais e transformar ideias em realidade.
+                        Especializado em construir aplicações modernas, foco no equilíbrio entre a entrega 
+                        de valor ao negócio e a excelência técnica. Utilizo o pensamento analítico e as 
+                        melhores práticas de engenharia de software para transformar desafios complexos em 
+                        soluções digitais escaláveis, eficientes e de alta performance.
                     </p>
                     <a href="#habilidades" className="btn-secondary">
                         Conhecer minhas Habilidades
