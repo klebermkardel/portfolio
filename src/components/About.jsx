@@ -1,4 +1,5 @@
 import React from 'react';
+import perfilImg from '../assets/img/perfil.png';
 
 const About = () => {
     return (
@@ -6,7 +7,7 @@ const About = () => {
             <div className="about-content">
                 <div className="about-image">
                     <img 
-                        src="/assets/img/perfil.png" 
+                        src={perfilImg} 
                         alt="Foto de Kleber M Kardel"
                         className="profile-img"    
                     />
