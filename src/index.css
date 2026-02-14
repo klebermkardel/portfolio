@@ -1094,3 +1094,153 @@ a {
   }
   .skill-card { max-width: 250px; }
 }
+
+/* PROJECTS */
+
+/* --- ESTILOS BASE (Desktop) --- */
+.projects {
+  padding: 120px 10%;
+  background-color: #121111;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2.8rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.projects-subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* Grid com comportamento inteligente */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  width: 100%; /* Ocupa a largura da coluna da grid */
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Permite alinhar o conteúdo interno */
+}
+
+.project-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--accent-color);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.project-info {
+  padding: 1.8rem;
+  flex-grow: 1; /* Faz a info ocupar o resto do card, alinhando botões */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info h3 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-info p {
+  color: #b3b3b3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  min-height: 80px; /* Mantém uniformidade se um texto for menor que outro */
+}
+
+.project-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.project-techs span {
+  background: rgba(174, 26, 26, 0.1);
+  color: var(--accent-color);
+  border: 1px solid rgba(174, 26, 26, 0.2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto; /* Empurra os links para o rodapé do card */
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* 1. TABLETS E NOTEBOOKS MÉDIOS (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .projects { padding: 100px 5%; }
+  .projects-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+  }
+  .project-image { height: 200px; }
+}
+
+/* 2. CELULARES (max-width: 768px) */
+@media (max-width: 768px) {
+  .projects-title { font-size: 2.2rem; }
+  
+  .projects-grid { 
+    grid-template-columns: 1fr; /* Coluna única no celular */
+    max-width: 400px; /* Evita que o card fique largo demais no celular */
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px); /* Menor deslocamento no touch */
+  }
+
+  .project-info { padding: 1.5rem; }
+  
+  .project-links {
+    justify-content: space-between;
+  }
+}
+
+/* 3. CELULARES PEQUENOS (max-width: 480px) */
+@media (max-width: 480px) {
+  .projects { padding: 60px 20px; }
+  .project-image { height: 180px; }
+  .project-info h3 { font-size: 1.3rem; }
+}
