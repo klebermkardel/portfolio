@@ -619,6 +619,8 @@ a {
 
 /* Responsividade */
 
+/* NAVBAR */
+
 /* --- CONFIGURAÇÃO BASE (DESKTOP) --- */
 .header {
   position: fixed;
@@ -741,4 +743,140 @@ a {
 @media (max-width: 480px) {
   .logo .logoName { font-size: 1.5rem; }
   .navBar { padding: 0 20px; }
+}
+
+/* HERO */
+
+/* --- ESTILOS BASE (Desktop/Notebooks Grandes) --- */
+.hero {
+  min-height: 100vh; /* Ocupa a tela cheia */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 8% 0 8%; /* Espaço para a Navbar fixa */
+  background-color: #0d0d0d;
+  color: var(--text-color);
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 2;
+}
+
+.hero-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 4rem; /* Aumentado para impacto */
+  line-height: 1.1;
+  min-height: 4.4rem; /* Evita que o layout pule durante o typewriter */
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 550px;
+  color: #b3b3b3;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Container do Avatar */
+.hero-image {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.art-container {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.avatar-animated {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  animation: float 4s ease-in-out infinite, glow 3s ease-in-out infinite alternate;
+}
+
+/* --- 1. NOTEBOOKS E TELAS MÉDIAS (max-width: 1200px) --- */
+@media (max-width: 1200px) {
+  .hero-title { font-size: 3.2rem; }
+  .art-container { width: 380px; height: 380px; }
+}
+
+/* --- 2. TABLETS (max-width: 992px) --- */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column-reverse; /* Avatar em cima do texto no tablet */
+    justify-content: center;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+
+  .hero-content {
+    align-items: center;
+    flex: none;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .btn-primary {
+    align-self: center; /* Centraliza o botão no tablet/mobile */
+  }
+
+  .art-container {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/* --- 3. SMARTPHONES (max-width: 600px) --- */
+@media (max-width: 600px) {
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero-title { 
+    font-size: 2.2rem; 
+    min-height: 2.5rem;
+  }
+
+  .hero-subtitle { 
+    font-size: 1.4rem; 
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .art-container {
+    width: 260px;
+    height: 260px;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); } /* Flutuação menor em telas pequenas */
+    100% { transform: translateY(0px); }
+  }
 }
