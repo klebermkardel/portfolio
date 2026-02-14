@@ -1244,3 +1244,123 @@ a {
   .project-image { height: 180px; }
   .project-info h3 { font-size: 1.3rem; }
 }
+
+/* --- ESTILOS BASE (Desktop) --- */
+.contact {
+  padding: 120px 10%;
+  background-color: #0d0d0d;
+}
+
+.contact-container {
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-intro {
+  flex: 1;
+  position: sticky; /* Mantém o texto visível enquanto rola o formulário longo */
+  top: 120px;
+}
+
+.contact-title {
+  font-size: 3rem;
+  color: var(--accent-color);
+  line-height: 1.2;
+}
+
+.contact-intro p {
+  color: #b3b3b3;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Formulário Profissional */
+.contact-form {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: #121212;
+  padding: 2.5rem;
+  border-radius: 15px;
+  border: 1px solid #222;
+}
+
+.form-group input, 
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--accent-color);
+  background-color: #222;
+  box-shadow: 0 0 0 4px rgba(174, 26, 26, 0.1);
+}
+
+.contact-form .btn-primary {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* 1. TABLETS (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .contact { padding: 100px 5%; }
+  .contact-container { gap: 3rem; }
+  .contact-title { font-size: 2.4rem; }
+}
+
+/* 2. CELULARES (max-width: 768px) */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Texto em cima, formulário embaixo */
+    text-align: center;
+  }
+
+  .contact-intro {
+    position: static; /* Remove o sticky no mobile */
+    margin-bottom: 3rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .footer {
+    margin-top: 50px;
+    padding: 30px 0;
+  }
+}
+
+/* 3. CELULARES PEQUENOS (max-width: 480px) */
+@media (max-width: 480px) {
+  .contact-title { font-size: 2rem; }
+  
+  .whatsapp-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
