@@ -1,4 +1,4 @@
-/* CSS Reset */
+/* 1. RESET & CONFIGURAÇÕES GLOBAIS */
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -51,10 +51,7 @@ a {
   --accent-color: #ae1a1a;
 }
 
-/* CSS Global */
-
-/* Barra de Navegação - Menu */
-
+/* 2. NAVBAR (BARRA DE NAVEGAÇÃO) */
 .navBar {
   height: 80px;
   background-color: var(--bg-navbar);
@@ -118,7 +115,7 @@ a {
   color: var(--accent-color)
 }
 
-/* Seção Início */
+/* 3. HERO SECTION (INÍCIO) */
 .hero {
   min-height: calc(100vh - 80px);
   display: flex;
@@ -169,7 +166,6 @@ a {
   filter: brightness(1.2);
 }
 
-/* Container do Avatar */
 .art-container {
     width: 400px;
     height: 400px;
@@ -177,7 +173,7 @@ a {
     justify-content: center;
     align-items: center;
     position: relative;
-    border: none; /* Removemos o tracejado anterior */
+    border: none;
 }
 
 .avatar-animated {
@@ -185,18 +181,15 @@ a {
     height: 100%;
     object-fit: contain;
     border-radius: 50%;
-    /* Aplica as animações simultâneas */
     animation: float 4s ease-in-out infinite, glow 3s ease-in-out infinite alternate;
 }
 
-/* Animação de Flutuar */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
 }
 
-/* Animação de Brilho Pulsante no contorno */
 @keyframes glow {
     from {
         filter: drop-shadow(0 0 10px rgba(174, 26, 26, 0.4));
@@ -206,8 +199,7 @@ a {
     }
 }
 
-/* Seção Sobre */
-
+/* 4. ABOUT SECTION (SOBRE) */
 .about {
   padding: 100px 10%;
   background-color: #121111;
@@ -276,8 +268,7 @@ a {
   box-shadow: 0 0 15px var(--accent-color);
 }
 
-/* Seção Habilidades */
-
+/* 5. SKILLS SECTION (HABILIDADES) */
 .skills {
   padding: 100px 10%;
   background-color: #0d0d0d;
@@ -341,9 +332,7 @@ a {
   box-shadow: 0 10px 20px rgba(174, 26, 26, 0.2);
 }
 
-/* Modal */
-
-/* Overlay - Fundo escurecido */
+/* --- MODAL SKILLS --- */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -358,7 +347,6 @@ a {
   backdrop-filter: blur(5px);
 }
 
-/* Caixa do Modal */
 .modal-content {
   background: #1a1a1a;
   padding: 3rem;
@@ -405,7 +393,7 @@ a {
   to { transform: scale(1); opacity: 1; }
 }
 
-/* Seção Projetos */
+/* 6. PROJECTS SECTION (PROJETOS) */
 .project-image {
   width: 100%;
   height: 200px;
@@ -421,7 +409,6 @@ a {
   transition: transform 0.5s ease;
 }
 
-/* Efeito de zoom na imagem quando passar o mouse no CARD */
 .project-card:hover .project-image img {
   transform: scale(1.1);
 }
@@ -517,7 +504,7 @@ a {
   color: var(--accent-color);
 }
 
-/* Seção Contato */
+/* 7. CONTACT SECTION (CONTATO) & FOOTER */
 .contact {
   padding: 100px 10%;
   background-color: #0d0d0d;
@@ -562,7 +549,6 @@ a {
   filter: brightness(1.1);
 }
 
-/* Estilo do Formulário */
 .contact-form {
   flex: 1;
   display: flex;
@@ -621,11 +607,9 @@ a {
   font-size: 0.9rem;
 }
 
-/* Responsividade */
+/* 8. MEDIA QUERIES (RESPONSIVIDADE) */
 
-/* NAVBAR */
-
-/* --- CONFIGURAÇÃO BASE (DESKTOP) --- */
+/* --- NAVBAR RESPONSIVE --- */
 .header {
   position: fixed;
   top: 0;
@@ -667,7 +651,6 @@ a {
   position: relative;
 }
 
-/* Efeito de underline moderno no hover */
 .itemMenu a::after {
   content: '';
   position: absolute;
@@ -688,35 +671,33 @@ a {
 }
 
 .mobile-menu-icon {
-  display: none; /* Escondido por padrão */
+  display: none;
   font-size: 1.8rem;
   color: var(--text-color);
   cursor: pointer;
 }
 
-/* --- 1. TABLETS & NOTEBOOKS PEQUENOS (max-width: 1024px) --- */
 @media (max-width: 1024px) {
   .logo .logoName { font-size: 1.2rem; }
   .menu .menuList { gap: 1.2rem; }
   .itemMenu a { font-size: 0.9rem; }
 }
 
-/* --- 2. SMARTPHONES & TABLETS VERTICAIS (max-width: 768px) --- */
 @media (max-width: 768px) {
   .mobile-menu-icon {
     display: block;
     z-index: 1001;
   }
 
-  .socialMedias { display: none; } /* Oculta redes sociais no topo para limpar mobile */
+  .socialMedias { display: none; }
 
   .menu {
     position: fixed;
     top: 0;
-    right: -100%; /* Começa fora da tela */
+    right: -100%;
     width: 100%;
     height: 100vh;
-    background: rgba(10, 10, 10, 0.95); /* Efeito Dark Glass */
+    background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     display: flex;
@@ -725,7 +706,7 @@ a {
   }
 
   .menu.active {
-    right: 0; /* Desliza para dentro */
+    right: 0;
   }
 
   .menu .menuList {
@@ -743,21 +724,18 @@ a {
   .logo { z-index: 1001; }
 }
 
-/* --- 3. AJUSTES PARA TELAS MUITO PEQUENAS (max-width: 480px) --- */
 @media (max-width: 480px) {
   .logo .logoName { font-size: 1.5rem; }
   .navBar { padding: 0 20px; }
 }
 
-/* HERO */
-
-/* --- ESTILOS BASE (Desktop/Notebooks Grandes) --- */
+/* --- HERO RESPONSIVE --- */
 .hero {
-  min-height: 100vh; /* Ocupa a tela cheia */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 8% 0 8%; /* Espaço para a Navbar fixa */
+  padding: 100px 8% 0 8%;
   background-color: #0d0d0d;
   color: var(--text-color);
   gap: 2rem;
@@ -773,9 +751,9 @@ a {
 
 .hero-title {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 4rem; /* Aumentado para impacto */
+  font-size: 4rem;
   line-height: 1.1;
-  min-height: 4.4rem; /* Evita que o layout pule durante o typewriter */
+  min-height: 4.4rem;
 }
 
 .hero-subtitle {
@@ -793,7 +771,6 @@ a {
   margin-bottom: 1.5rem;
 }
 
-/* Container do Avatar */
 .hero-image {
   flex: 0.8;
   display: flex;
@@ -810,24 +787,14 @@ a {
   position: relative;
 }
 
-.avatar-animated {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 50%;
-  animation: float 4s ease-in-out infinite, glow 3s ease-in-out infinite alternate;
-}
-
-/* --- 1. NOTEBOOKS E TELAS MÉDIAS (max-width: 1200px) --- */
 @media (max-width: 1200px) {
   .hero-title { font-size: 3.2rem; }
   .art-container { width: 380px; height: 380px; }
 }
 
-/* --- 2. TABLETS (max-width: 992px) --- */
 @media (max-width: 992px) {
   .hero {
-    flex-direction: column-reverse; /* Avatar em cima do texto no tablet */
+    flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
     padding-top: 120px;
@@ -844,7 +811,7 @@ a {
   }
 
   .btn-primary {
-    align-self: center; /* Centraliza o botão no tablet/mobile */
+    align-self: center;
   }
 
   .art-container {
@@ -853,7 +820,6 @@ a {
   }
 }
 
-/* --- 3. SMARTPHONES (max-width: 600px) --- */
 @media (max-width: 600px) {
   .hero {
     padding-left: 5%;
@@ -880,14 +846,12 @@ a {
 
   @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); } /* Flutuação menor em telas pequenas */
+    50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
   }
 }
 
-/* About */
-
-/* --- ESTILOS BASE (Desktop) --- */
+/* --- ABOUT RESPONSIVE --- */
 .about {
   padding: 120px 10%;
   background-color: #121111;
@@ -936,10 +900,9 @@ a {
   font-size: 1.15rem;
   line-height: 1.8;
   color: #ccc;
-  text-align: justify; /* Melhora a estética em textos longos */
+  text-align: justify;
 }
 
-/* --- 1. TABLETS & NOTEBOOKS PEQUENOS (max-width: 1024px) --- */
 @media (max-width: 1024px) {
   .about { padding: 80px 5%; }
   .about-content { gap: 3rem; }
@@ -947,21 +910,20 @@ a {
   .section-title { font-size: 2.2rem; }
 }
 
-/* --- 2. SMARTPHONES & TABLETS VERTICAIS (max-width: 768px) --- */
 @media (max-width: 768px) {
   .about-content {
-    flex-direction: column; /* Empilha imagem e texto */
+    flex-direction: column;
     text-align: center;
     gap: 3rem;
   }
 
   .about-text {
-    align-items: center; /* Centraliza o título e o botão */
+    align-items: center;
   }
 
   .about-text p {
     font-size: 1.05rem;
-    text-align: center; /* Centraliza o texto para melhor harmonia mobile */
+    text-align: center;
     line-height: 1.7;
   }
 
@@ -971,22 +933,19 @@ a {
   }
 
   .btn-secondary {
-    align-self: center; /* Garante que o botão fique no meio */
-    width: 100%; /* Botão largo facilita o clique no celular */
+    align-self: center;
+    width: 100%;
     max-width: 300px;
   }
 }
 
-/* --- 3. TELAS MUITO PEQUENAS (max-width: 480px) --- */
 @media (max-width: 480px) {
   .about { padding: 60px 20px; }
   .section-title { font-size: 1.8rem; }
   .profile-img { width: 200px; height: 200px; }
 }
 
-/* Skills */
-
-/* --- ESTILOS BASE (Desktop) --- */
+/* --- SKILLS RESPONSIVE --- */
 .skills {
   padding: 120px 10%;
   background-color: #0d0d0d;
@@ -1013,7 +972,6 @@ a {
   opacity: 0.8;
 }
 
-/* Grid Inteligente */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -1033,38 +991,22 @@ a {
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
-  width: 100%; /* Ocupa o espaço da coluna do grid */
+  width: 100%;
   max-width: 200px;
   height: 200px;
   cursor: pointer;
 }
 
-.skill-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent-color);
-  box-shadow: 0 10px 30px rgba(174, 26, 26, 0.15);
-  background-color: #222;
-}
-
-.skill-icon {
-  font-size: 3.5rem;
-  color: var(--accent-color);
-}
-
-/* --- RESPONSIVIDADE --- */
-
-/* 1. TABLETS (max-width: 1024px) */
 @media (max-width: 1024px) {
   .skills { padding: 100px 5%; }
   .skills-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 }
 
-/* 2. CELULARES (max-width: 768px) */
 @media (max-width: 768px) {
   .skills-title { font-size: 2.2rem; }
   
   .skills-grid { 
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular fica mais organizado */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem; 
   }
 
@@ -1076,7 +1018,6 @@ a {
   .skill-icon { font-size: 2.8rem; }
   .skill-card h3 { font-size: 1rem; }
 
-  /* Ajustes do Modal no Mobile */
   .modal-content {
     padding: 2.5rem 1.5rem;
     width: 95%;
@@ -1087,17 +1028,14 @@ a {
   .modal-content p { font-size: 0.95rem; }
 }
 
-/* 3. CELULARES PEQUENOS (max-width: 400px) */
 @media (max-width: 400px) {
   .skills-grid { 
-    grid-template-columns: 1fr; /* 1 coluna para não apertar os cards */
+    grid-template-columns: 1fr;
   }
   .skill-card { max-width: 250px; }
 }
 
-/* PROJECTS */
-
-/* --- ESTILOS BASE (Desktop) --- */
+/* --- PROJECTS RESPONSIVE --- */
 .projects {
   padding: 120px 10%;
   background-color: #121111;
@@ -1116,7 +1054,6 @@ a {
   margin-bottom: 3rem;
 }
 
-/* Grid com comportamento inteligente */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -1131,12 +1068,12 @@ a {
   background-color: #1a1a1a;
   border: 1px solid #333;
   border-radius: 12px;
-  width: 100%; /* Ocupa a largura da coluna da grid */
+  width: 100%;
   overflow: hidden;
   text-align: left;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
   display: flex;
-  flex-direction: column; /* Permite alinhar o conteúdo interno */
+  flex-direction: column;
 }
 
 .project-image {
@@ -1145,70 +1082,6 @@ a {
   overflow: hidden;
 }
 
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.1);
-}
-
-.project-card:hover {
-  transform: translateY(-12px);
-  border-color: var(--accent-color);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-}
-
-.project-info {
-  padding: 1.8rem;
-  flex-grow: 1; /* Faz a info ocupar o resto do card, alinhando botões */
-  display: flex;
-  flex-direction: column;
-}
-
-.project-info h3 {
-  color: var(--text-color);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.project-info p {
-  color: #b3b3b3;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  min-height: 80px; /* Mantém uniformidade se um texto for menor que outro */
-}
-
-.project-techs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-bottom: 2rem;
-}
-
-.project-techs span {
-  background: rgba(174, 26, 26, 0.1);
-  color: var(--accent-color);
-  border: 1px solid rgba(174, 26, 26, 0.2);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 5px 12px;
-  border-radius: 20px;
-}
-
-.project-links {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: auto; /* Empurra os links para o rodapé do card */
-}
-
-/* --- RESPONSIVIDADE --- */
-
-/* 1. TABLETS E NOTEBOOKS MÉDIOS (max-width: 1024px) */
 @media (max-width: 1024px) {
   .projects { padding: 100px 5%; }
   .projects-grid { 
@@ -1218,17 +1091,16 @@ a {
   .project-image { height: 200px; }
 }
 
-/* 2. CELULARES (max-width: 768px) */
 @media (max-width: 768px) {
   .projects-title { font-size: 2.2rem; }
   
   .projects-grid { 
-    grid-template-columns: 1fr; /* Coluna única no celular */
-    max-width: 400px; /* Evita que o card fique largo demais no celular */
+    grid-template-columns: 1fr;
+    max-width: 400px;
   }
 
   .project-card:hover {
-    transform: translateY(-5px); /* Menor deslocamento no touch */
+    transform: translateY(-5px);
   }
 
   .project-info { padding: 1.5rem; }
@@ -1238,14 +1110,13 @@ a {
   }
 }
 
-/* 3. CELULARES PEQUENOS (max-width: 480px) */
 @media (max-width: 480px) {
   .projects { padding: 60px 20px; }
   .project-image { height: 180px; }
   .project-info h3 { font-size: 1.3rem; }
 }
 
-/* --- ESTILOS BASE (Desktop) --- */
+/* --- CONTACT RESPONSIVE --- */
 .contact {
   padding: 120px 10%;
   background-color: #0d0d0d;
@@ -1261,7 +1132,7 @@ a {
 
 .contact-intro {
   flex: 1;
-  position: sticky; /* Mantém o texto visível enquanto rola o formulário longo */
+  position: sticky;
   top: 120px;
 }
 
@@ -1278,7 +1149,6 @@ a {
   line-height: 1.8;
 }
 
-/* Formulário Profissional */
 .contact-form {
   flex: 1.2;
   display: flex;
@@ -1323,24 +1193,20 @@ a {
   border: none;
 }
 
-/* --- RESPONSIVIDADE --- */
-
-/* 1. TABLETS (max-width: 1024px) */
 @media (max-width: 1024px) {
   .contact { padding: 100px 5%; }
   .contact-container { gap: 3rem; }
   .contact-title { font-size: 2.4rem; }
 }
 
-/* 2. CELULARES (max-width: 768px) */
 @media (max-width: 768px) {
   .contact-container {
-    flex-direction: column; /* Texto em cima, formulário embaixo */
+    flex-direction: column;
     text-align: center;
   }
 
   .contact-intro {
-    position: static; /* Remove o sticky no mobile */
+    position: static;
     margin-bottom: 3rem;
   }
 
@@ -1355,7 +1221,6 @@ a {
   }
 }
 
-/* 3. CELULARES PEQUENOS (max-width: 480px) */
 @media (max-width: 480px) {
   .contact-title { font-size: 2rem; }
   
