@@ -14,7 +14,7 @@ const About = () => {
                 </div>
 
                 <div className="about-text">
-                    <h2 className="section-title">Sobre Mim</h2>
+                    <h2 className="about-title">Sobre Mim</h2>
                     <p>
                         Me chamo <strong>Kleber M. Kardel</strong>, desenvolvedor Fullstack graduado em 
                         <strong> Ciência da Computação</strong> pela FAM - Faculdades das Américas. 
