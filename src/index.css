@@ -616,3 +616,129 @@ a {
   color: #666;
   font-size: 0.9rem;
 }
+
+/* Responsividade */
+
+/* --- CONFIGURAÇÃO BASE (DESKTOP) --- */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--bg-navbar);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navBar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo, .menu, .socialMedias { flex: 1; }
+
+.logo .logoName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  color: var(--text-color);
+}
+
+.menu .menuList {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.itemMenu a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Efeito de underline moderno no hover */
+.itemMenu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.itemMenu a:hover::after { width: 100%; }
+
+.socialMediasList {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+
+.mobile-menu-icon {
+  display: none; /* Escondido por padrão */
+  font-size: 1.8rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* --- 1. TABLETS & NOTEBOOKS PEQUENOS (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  .logo .logoName { font-size: 1.2rem; }
+  .menu .menuList { gap: 1.2rem; }
+  .itemMenu a { font-size: 0.9rem; }
+}
+
+/* --- 2. SMARTPHONES & TABLETS VERTICAIS (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .mobile-menu-icon {
+    display: block;
+    z-index: 1001;
+  }
+
+  .socialMedias { display: none; } /* Oculta redes sociais no topo para limpar mobile */
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Começa fora da tela */
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.95); /* Efeito Dark Glass */
+    backdrop-filter: blur(10px);
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu.active {
+    right: 0; /* Desliza para dentro */
+  }
+
+  .menu .menuList {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .itemMenu a {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .logo { z-index: 1001; }
+}
+
+/* --- 3. AJUSTES PARA TELAS MUITO PEQUENAS (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .logo .logoName { font-size: 1.5rem; }
+  .navBar { padding: 0 20px; }
+}
