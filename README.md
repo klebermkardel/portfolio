@@ -1,31 +1,39 @@
-# Portfolio - Kleber M Kardel
+# 💻 Portfolio - Kleber M. Kardel
 
-Este é o repositório do meu portfólio pessoal, desenvolvido com React e Vite. O projeto foi focado em criar uma interface moderna, performática e totalmente responsiva para apresentar meus projetos e habilidades como Desenvolvedor Fullstack.
+Este é o meu portfólio pessoal, desenvolvido para consolidar minha presença digital como **Desenvolvedor Fullstack**. O projeto prioriza a performance, acessibilidade e uma experiência de usuário fluida em múltiplos dispositivos.
+
+> **Status:** Concluído e em Produção 🚀
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-React 18 - Biblioteca Javascript para construção de interfaces.
+O projeto foi construído utilizando o ecossistema moderno de desenvolvimento web:
 
-Vite - Build tool de última geração para um desenvolvimento rápido.
+* **React 18**: Componentização eficiente e gerenciamento de estado.
+* **Vite**: Ferramenta de build otimizada para carregamento instantâneo.
+* **CSS3 (Custom Properties & Grid/Flexbox)**: Estilização modular e responsiva sem dependências externas de UI.
+* **FontAwesome**: Ícones vetoriais integrados via componentes.
+* **Web3Forms**: Solução serverless para processamento de formulários.
 
-FontAwesome - Ícones vetoriais gerenciados via componentes React.
+---
 
-CSS3 - Estilização moderna com variáveis e Flexbox/Grid.
+## 📱 Funcionalidades Principais
 
-Web3Forms - Integração de formulário de contato sem necessidade de backend.
+* **Interface Adaptativa (Responsive Design)**: Layout otimizado do mobile (320px) ao desktop ultra-wide.
+* **Typewriter Effect**: Animação de escrita dinâmica na seção Hero utilizando `useRef` e `setInterval`.
+* **Modal Interativo de Habilidades**: Explicações técnicas detalhadas sobre cada tecnologia ao clicar nos cards.
+* **Showcase de Projetos**: Cards dinâmicos com efeitos de zoom, tags de tecnologias e links para repositórios/live demos.
+* **Comunicação Integrada**: Formulário de contato funcional e link direto para WhatsApp.
 
-## 📱 Funcionalidades
+---
 
-Typewriter Effect: Animação de escrita dinâmica na seção Hero com useRef.
+## 📈 Melhores Práticas Implementadas
 
-Habilidades Dinâmicas: Grid de tecnologias renderizado a partir de mapeamento de dados.
+* **Mobile-First**: Desenvolvimento focado primeiramente em dispositivos móveis.
 
-Projetos Showcase: Cards com efeitos de zoom, descrição de tecnologias e links externos.
+* **Conventional Commits**: Histórico de Git organizado e legível.
 
-Formulário Funcional: Recebimento de mensagens diretamente no e-mail com proteção anti-spam.
+* **Performance**: Otimização de imagens e uso de componentes leves para garantir um carregamento rápido.
 
-Contato Direto: Integração com API do WhatsApp para comunicação rápida.
-
-## 🎨 Layout
-
-O layout foi desenhado para ser limpo e intuitivo, utilizando uma paleta de cores escura com acentos em vermelho (#ae1a1a), transmitindo seriedade e foco técnico.
+---
