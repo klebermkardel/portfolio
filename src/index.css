@@ -983,3 +983,114 @@ a {
   .section-title { font-size: 1.8rem; }
   .profile-img { width: 200px; height: 200px; }
 }
+
+/* Skills */
+
+/* --- ESTILOS BASE (Desktop) --- */
+.skills {
+  padding: 120px 10%;
+  background-color: #0d0d0d;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.8rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.skills-subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.call-to-action {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Grid Inteligente */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%; /* Ocupa o espaço da coluna do grid */
+  max-width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(174, 26, 26, 0.15);
+  background-color: #222;
+}
+
+.skill-icon {
+  font-size: 3.5rem;
+  color: var(--accent-color);
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* 1. TABLETS (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .skills { padding: 100px 5%; }
+  .skills-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+
+/* 2. CELULARES (max-width: 768px) */
+@media (max-width: 768px) {
+  .skills-title { font-size: 2.2rem; }
+  
+  .skills-grid { 
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular fica mais organizado */
+    gap: 1rem; 
+  }
+
+  .skill-card {
+    height: 160px;
+    gap: 0.8rem;
+  }
+
+  .skill-icon { font-size: 2.8rem; }
+  .skill-card h3 { font-size: 1rem; }
+
+  /* Ajustes do Modal no Mobile */
+  .modal-content {
+    padding: 2.5rem 1.5rem;
+    width: 95%;
+  }
+
+  .modal-icon { font-size: 3rem; }
+  .modal-content h3 { font-size: 1.6rem; }
+  .modal-content p { font-size: 0.95rem; }
+}
+
+/* 3. CELULARES PEQUENOS (max-width: 400px) */
+@media (max-width: 400px) {
+  .skills-grid { 
+    grid-template-columns: 1fr; /* 1 coluna para não apertar os cards */
+  }
+  .skill-card { max-width: 250px; }
+}
