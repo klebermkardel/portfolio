@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faHtml5, faCss3Alt, faJs, faReact, faNodeJs, faGitAlt 
+  faHtml5, faCss3Alt, faJs, faTailwindCss, faReact, faNodeJs, faGitAlt 
 } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,6 +23,11 @@ const Skills = () => {
         name: "JavaScript", 
         icon: faJs, 
         description: "Desenvolvimento de lógica complexa, manipulação de DOM e consumo de APIs assíncronas." 
+    },
+    {
+      name: "TailwindCSS",
+      icon: faTailwindCss,
+      description: "Estilização utilitária de alta performance, construção de interfaces responsivas e design system consistente via classes atômicas."
     },
     { 
         name: "React", 
