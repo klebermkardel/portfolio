@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faHtml5, faCss3Alt, faJs, faReact, faNodeJs, faGitAlt 
 } from '@fortawesome/free-brands-svg-icons';
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si"; // Ícone oficial do Tailwind
 import { faDatabase, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 const Skills = () => {
   const [selectedSkill, setSelectedSkill] = useState(null);
 
@@ -26,7 +27,7 @@ const Skills = () => {
     },
     {
       name: "TailwindCSS",
-      icon: SiTailwindcss,
+      icon: SiTailwindcss, // Note que este é um componente React, não um objeto FontAwesome
       description: "Estilização utilitária de alta performance, construção de interfaces responsivas e design system consistente via classes atômicas."
     },
     { 
@@ -65,7 +66,13 @@ const Skills = () => {
             onClick={() => setSelectedSkill(skill)}
             style={{ cursor: 'pointer' }}
           >
-            <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+            {/* Lógica para renderizar o ícone correto */}
+            {skill.name === "TailwindCSS" ? (
+              <skill.icon className="skill-icon" />
+            ) : (
+              <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+            )}
+            
             <h3>{skill.name}</h3>
           </div>
         ))}
@@ -78,7 +85,14 @@ const Skills = () => {
             <button className="modal-close" onClick={() => setSelectedSkill(null)}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
-            <FontAwesomeIcon icon={selectedSkill.icon} className="modal-icon" />
+            
+            {/* Lógica para renderizar o ícone correto dentro do Modal */}
+            {selectedSkill.name === "TailwindCSS" ? (
+              <selectedSkill.icon className="modal-icon" />
+            ) : (
+              <FontAwesomeIcon icon={selectedSkill.icon} className="modal-icon" />
+            )}
+            
             <h3>{selectedSkill.name}</h3>
             <p>{selectedSkill.description}</p>
           </div>
