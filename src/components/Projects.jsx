@@ -2,15 +2,16 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import pcStoreImg from '../assets/img/projects-images/pc-store.png';
 
 const Projects = () => {
   const projectsList = [
     {
-      title: "Projeto Exemplo 1",
-      image: "/assets/IMG/projects/projeto1.jpg",
-      description: "Uma breve descrição do que o projeto faz e qual problema ele resolve.",
-      techs: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/klebermkardel",
+      title: "PC Store",
+      image: pcStoreImg,
+      description: "E-commerce fullstack de hardware com vitrine, carrinho, checkout em etapas, autenticação JWT com refresh token automático e painel administrativo completo.",
+      techs: ["React", "Node.js", "MySQL", "TailwindCSS", "JWT"],
+      github: "https://github.com/klebermkardel/pc-store",
       link: "#"
     },
     {
