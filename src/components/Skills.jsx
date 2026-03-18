@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faHtml5, faCss3Alt, faJs, faTailwind, faReact, faNodeJs, faGitAlt 
 } from '@fortawesome/free-brands-svg-icons';
+import { SiTailwindcss } from "react-icons/si";
 import { faDatabase, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Skills = () => {
@@ -26,7 +27,7 @@ const Skills = () => {
     },
     {
       name: "TailwindCSS",
-      icon: faTailwind,
+      icon: SiTailwindcss,
       description: "Estilização utilitária de alta performance, construção de interfaces responsivas e design system consistente via classes atômicas."
     },
     { 
