@@ -7,12 +7,12 @@ import pcStoreImg from '../assets/img/projects-images/pc-store.png';
 const Projects = () => {
   const projectsList = [
     {
-      title: "PC Store",
+      title: "K-Tech Store",
       image: pcStoreImg,
       description: "E-commerce fullstack de hardware com vitrine, carrinho, checkout em etapas, autenticação JWT com refresh token automático e painel administrativo completo.",
       techs: ["React", "Node.js", "MySQL", "TailwindCSS", "JWT"],
       github: "https://github.com/klebermkardel/pc-store",
-      link: "#"
+      link: "https://ktechstore.vercel.app/"
     },
     {
       title: "Projeto Exemplo 2",
@@ -49,7 +49,7 @@ const Projects = () => {
                   <FontAwesomeIcon icon={faGithub} /> Code
                 </a>
                 <a href={project.link} target="_blank" rel="noreferrer">
-                  <FontAwesomeIcon icon={faExternalLinkAlt} /> Live Demo
+                  <FontAwesomeIcon icon={faExternalLinkAlt} /> Deploy
                 </a>
               </div>
             </div>
