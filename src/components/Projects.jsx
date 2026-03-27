@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import pcStoreImg from '../assets/img/projects-images/pc-store.png';
-import mentePlenaImg from '../assets/img/projects-images/mente-plena';
+import mentePlenaImg from '../assets/img/projects-images/mente-plena.png';
 
 const Projects = () => {
   const projectsList = [
