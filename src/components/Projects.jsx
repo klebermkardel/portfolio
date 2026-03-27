@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import pcStoreImg from '../assets/img/projects-images/pc-store.png';
+import mentePlenaImg from '../assets/img/projects-images/mente-plena';
 
 const Projects = () => {
   const projectsList = [
@@ -15,12 +16,12 @@ const Projects = () => {
       link: "https://ktechstore.vercel.app/"
     },
     {
-      title: "Projeto Exemplo 2",
-      image: "/assets/IMG/projects/projeto2.jpg",
-      description: "Explicação sobre as funcionalidades principais e tecnologias envolvidas.",
-      techs: ["JavaScript", "CSS Semântico"],
-      github: "https://github.com/klebermkardel",
-      link: "#"
+      title: "Mente Plena | Clínica de Psicologia",
+      image: mentePlenaImg,
+      description: "Uma Landing Page moderna, minimalista e acolhedora desenvolvida para a clínica Mente Plena. O projeto foca em proporcionar uma experiência de usuário tranquila, refletindo o cuidado e o acolhimento do atendimento psicológico.",
+      techs: ["React", "TailwindCSS"],
+      github: "https://github.com/klebermkardel/mente-plena",
+      link: "https://mente-plena.vercel.app/"
     }
   ];
 
